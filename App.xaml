@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel_Agenda13.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#176B67</Color>
+            <Color x:Key="PrimaryDark">#104C49</Color>
+            <Color x:Key="Accent">#E6B566</Color>
+            <Color x:Key="PageBackground">#F5F7F6</Color>
+            <Color x:Key="TextDark">#20302F</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

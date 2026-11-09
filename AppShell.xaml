@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:AppHotel_Agenda13.Pages"
+       x:Class="AppHotel_Agenda13.AppShell"
+       FlyoutBehavior="Disabled"
+       Shell.NavBarIsVisible="True"
+       Shell.BackgroundColor="#176B67"
+       Shell.ForegroundColor="White"
+       Shell.TitleColor="White">
+    <TabBar>
+        <ShellContent Title="Reservar"
+                      ContentTemplate="{DataTemplate pages:HomePage}" />
+        <ShellContent Title="Sobre"
+                      ContentTemplate="{DataTemplate pages:SobrePage}" />
+    </TabBar>
+</Shell>

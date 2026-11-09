@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel_Agenda13.Pages.HomePage"
+             Title="App Hotel"
+             BackgroundColor="{StaticResource PageBackground}">
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="18">
+            <Border BackgroundColor="{StaticResource Primary}" StrokeThickness="0"
+                    Padding="22" StrokeShape="RoundRectangle 22">
+                <VerticalStackLayout Spacing="7">
+                    <Label Text="APP HOTEL" TextColor="#E6B566" FontSize="13"
+                           FontAttributes="Bold" CharacterSpacing="2" />
+                    <Label Text="Sua próxima&#10;estadia começa aqui."
+                           TextColor="White" FontSize="29" FontAttributes="Bold" />
+                    <Label Text="Conforto, praticidade e uma experiência especial."
+                           TextColor="#E4F0EF" FontSize="14" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Faça sua reserva" FontSize="22" FontAttributes="Bold"
+                   TextColor="{StaticResource TextDark}" />
+            <Border BackgroundColor="White" Stroke="#E4EAE8" StrokeThickness="1"
+                    Padding="18" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Spacing="14">
+                    <Label Text="Data de entrada" FontAttributes="Bold" TextColor="{StaticResource TextDark}" />
+                    <DatePicker Date="{Binding DataEntrada}" Format="dd/MM/yyyy" />
+                    <Label Text="Tipo de acomodação" FontAttributes="Bold" TextColor="{StaticResource TextDark}" />
+                    <Picker Title="Selecione o quarto" ItemsSource="{Binding TiposQuarto}"
+                            SelectedItem="{Binding TipoQuarto}" />
+                    <Label Text="Quantidade de hóspedes" FontAttributes="Bold" TextColor="{StaticResource TextDark}" />
+                    <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <Label Text="{Binding QuantidadeHospedes, StringFormat='{0} hóspede(s)'}"
+                               VerticalOptions="Center" TextColor="{StaticResource TextDark}" />
+                        <Stepper Grid.Column="1" Minimum="1" Maximum="6" Increment="1"
+                                 Value="{Binding QuantidadeHospedes}" />
+                    </Grid>
+                    <Button Text="Consultar disponibilidade" Clicked="OnConsultarClicked"
+                            BackgroundColor="{StaticResource Primary}" TextColor="White"
+                            CornerRadius="12" HeightRequest="50" FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Border>
+            <Label Text="Dica: escolha a data, o quarto e a quantidade de hóspedes para simular sua reserva."
+                   FontSize="12" TextColor="#667573" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
